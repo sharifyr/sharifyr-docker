@@ -1,1 +1,0 @@
-# sharifyr-docker

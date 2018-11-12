@@ -1,2 +1,3 @@
-client-main/
-server-social/
+core/client-main/
+core/server-social/
+teamcity/teamcity/data/system/pluginData/customDataStorage/buildTypes/bt1/idmap.properties
