@@ -120,3 +120,12 @@
 [2018-11-12 03:00:00,561]   INFO -  jetbrains.buildServer.CLEANUP - Clean-up finished, took < 1s
 [2018-11-12 03:00:00,569]   INFO -  jetbrains.buildServer.CLEANUP - Post-cleanup tasks finished, took 7ms
 [2018-11-12 03:00:00,570]   INFO -  jetbrains.buildServer.CLEANUP - Lock for the maintenance process released
+[2018-11-12 04:24:09,637]   INFO -  jetbrains.buildServer.CLEANUP - Max cleanup duration is set to 0 seconds
+[2018-11-12 04:24:09,643]   INFO -  jetbrains.buildServer.CLEANUP - Cleanup time has been set to 03:00:00 daily
+[2018-11-12 04:24:09,657]   INFO -  jetbrains.buildServer.CLEANUP - Cleanup is enabled
+[2018-11-12 16:29:38,083]   INFO -  jetbrains.buildServer.CLEANUP - Max cleanup duration is set to 0 seconds
+[2018-11-12 16:29:38,110]   INFO -  jetbrains.buildServer.CLEANUP - Cleanup time has been set to 03:00:00 daily
+[2018-11-12 16:29:38,118]   INFO -  jetbrains.buildServer.CLEANUP - Cleanup is enabled
+[2018-11-12 16:41:30,000]   INFO -  jetbrains.buildServer.CLEANUP - Max cleanup duration is set to 0 seconds
+[2018-11-12 16:41:30,004]   INFO -  jetbrains.buildServer.CLEANUP - Cleanup time has been set to 03:00:00 daily
+[2018-11-12 16:41:30,004]   INFO -  jetbrains.buildServer.CLEANUP - Cleanup is enabled

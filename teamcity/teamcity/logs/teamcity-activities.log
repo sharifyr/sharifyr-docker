@@ -142,3 +142,24 @@
 [2018-11-12 03:57:17,596]   INFO - tbrains.buildServer.ACTIVITIES - Build added to queue; Queued build {Build promotion {promotion id=26, configuration={id=ServerSocial, internal id=bt1}, queued}, triggered by "Git" (##vcsName='jetbrains.git' type='vcs')}
 [2018-11-12 03:57:17,623]   INFO - tbrains.buildServer.ACTIVITIES - Build started; Sharifyr / Server Social {id=ServerSocial, internal id=bt1} #26 {promotion id=26, agent="dockerteamcity_teamcity-agent_1" {id=1}, triggered by "Git" (##vcsName='jetbrains.git' type='vcs'). Started 2018-11-12 03:57:17.617, running}
 [2018-11-12 03:58:43,401]   INFO - tbrains.buildServer.ACTIVITIES - Finished build Sharifyr / Server Social {id=ServerSocial, internal id=bt1} #26 {promotion id=26, agent="dockerteamcity_teamcity-agent_1" {id=1}, triggered by "Git" (##vcsName='jetbrains.git' type='vcs'). Started 2018-11-12 03:57:18.168, finished. Status "NORMAL 'Running'"}
+[2018-11-12 04:19:45,464]   INFO - tbrains.buildServer.ACTIVITIES - Shutdown Spring components
+[2018-11-12 04:19:46,654]   INFO - tbrains.buildServer.ACTIVITIES - Spring components are shut down
+[2018-11-12 04:24:16,410]   INFO - tbrains.buildServer.ACTIVITIES - Server Started
+[2018-11-12 16:23:40,487]   INFO - tbrains.buildServer.ACTIVITIES - Shutdown Spring components
+[2018-11-12 16:23:41,944]   INFO - tbrains.buildServer.ACTIVITIES - Spring components are shut down
+[2018-11-12 16:29:44,604]   INFO - tbrains.buildServer.ACTIVITIES - Server Started
+[2018-11-12 16:34:56,089]   INFO - tbrains.buildServer.ACTIVITIES - Projects export started: [Project: Sharifyr, parent id: _Root] by 'admin' {id=1}
+[2018-11-12 16:38:37,966]   INFO - tbrains.buildServer.ACTIVITIES - Shutdown Spring components
+[2018-11-12 16:38:39,074]   INFO - tbrains.buildServer.ACTIVITIES - Spring components are shut down
+[2018-11-12 16:41:36,873]   INFO - tbrains.buildServer.ACTIVITIES - Server Started
+[2018-11-12 16:42:59,359]   INFO - tbrains.buildServer.ACTIVITIES - New user created: 'admin' {id=1}
+[2018-11-12 16:43:40,309]   INFO - s.buildServer.ACTIVITIES.AUDIT - agent_authorize: Agent ""dockerteamcity_teamcity-agent_1" {id=1}" was authorized by "'admin' {id=1}"
+[2018-11-12 16:51:55,803]   INFO - tbrains.buildServer.ACTIVITIES - Projects Import started by user 'admin' {id=1}. For details see /opt/teamcity/logs/projectsImport-2018-11-12_16.51.55
+[2018-11-12 16:51:56,143]   INFO - s.buildServer.ACTIVITIES.AUDIT - build_type_create: "Sharifyr / Server Social {id=ServerSocial, internal id=bt1}" was created by "'admin' {id=1}" with comment "Created during projects import"
+[2018-11-12 16:51:56,146]   INFO - s.buildServer.ACTIVITIES.AUDIT - project_create: Project "Sharifyr {id=Sharifyr, internal id=project1}" was created by "'admin' {id=1}" with comment "Created during projects import"
+[2018-11-12 16:51:56,148]   INFO - s.buildServer.ACTIVITIES.AUDIT - vcs_root_create: VCS root ""https://github.com/sharifyr/server-social.git#refs/heads/master" {internal id=1, id=ServerSocial_HttpsGithubComSharifyrServerSocialGitRefsHeadsMaster, description: "https://github.com/sharifyr/server-social.git#refs/heads/master"}" was created by "'admin' {id=1}" with comment "Created during projects import"
+[2018-11-12 16:51:56,171]   INFO - tbrains.buildServer.ACTIVITIES - Projects Import finished.
+[2018-11-12 16:52:17,091]   INFO - s.buildServer.ACTIVITIES.AUDIT - build_add_to_queue: Build BUILD_PROMOTION{id=1} was added to queue by "'admin' {id=1}"
+[2018-11-12 16:52:17,103]   INFO - tbrains.buildServer.ACTIVITIES - Build added to queue; Queued build {Build promotion {promotion id=1, configuration={id=ServerSocial, internal id=bt1}, queued}, triggered by "'admin' {id=1}" (##userId='1' type='user')}
+[2018-11-12 16:52:17,271]   INFO - tbrains.buildServer.ACTIVITIES - Build started; Sharifyr / Server Social {id=ServerSocial, internal id=bt1} #27 {promotion id=1, agent="dockerteamcity_teamcity-agent_1" {id=1}, triggered by "'admin' {id=1}" (##userId='1' type='user'). Started 2018-11-12 16:52:17.203, running}
+[2018-11-12 16:53:43,104]   INFO - tbrains.buildServer.ACTIVITIES - Finished build Sharifyr / Server Social {id=ServerSocial, internal id=bt1} #27 {promotion id=1, agent="dockerteamcity_teamcity-agent_1" {id=1}, triggered by "'admin' {id=1}" (##userId='1' type='user'). Started 2018-11-12 16:52:18.033, finished. Status "NORMAL 'Running'"}

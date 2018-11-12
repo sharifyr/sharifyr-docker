@@ -20,3 +20,10 @@
 [2018-11-12 00:11:01,861]   INFO - n.email.EMailNotificatorConfig - Loading configuration file: /data/teamcity_server/datadir/config/_notifications/email/email-config.xml
 [2018-11-12 00:40:56,396]   INFO - n.email.EMailNotificatorConfig - Loading configuration file: /data/teamcity_server/datadir/config/_notifications/email/email-config.xml
 [2018-11-12 00:40:59,681]   INFO - jabber.JabberNotificatorConfig - Loading configuration file: /data/teamcity_server/datadir/config/_notifications/jabber/jabber-config.xml
+[2018-11-12 04:24:01,624]   INFO - n.email.EMailNotificatorConfig - Loading configuration file: /data/teamcity_server/datadir/config/_notifications/email/email-config.xml
+[2018-11-12 04:24:04,691]   INFO - jabber.JabberNotificatorConfig - Loading configuration file: /data/teamcity_server/datadir/config/_notifications/jabber/jabber-config.xml
+[2018-11-12 16:27:17,622]   INFO - jabber.JabberNotificatorConfig - Loading configuration file: /data/teamcity_server/datadir/config/_notifications/jabber/jabber-config.xml
+[2018-11-12 16:29:26,458]   INFO - jabber.JabberNotificatorConfig - Loading configuration file: /data/teamcity_server/datadir/config/_notifications/jabber/jabber-config.xml
+[2018-11-12 16:29:29,570]   INFO - n.email.EMailNotificatorConfig - Loading configuration file: /data/teamcity_server/datadir/config/_notifications/email/email-config.xml
+[2018-11-12 16:41:20,456]   INFO - jabber.JabberNotificatorConfig - Loading configuration file: /data/teamcity_server/datadir/config/_notifications/jabber/jabber-config.xml
+[2018-11-12 16:41:25,552]   INFO - n.email.EMailNotificatorConfig - Loading configuration file: /data/teamcity_server/datadir/config/_notifications/email/email-config.xml

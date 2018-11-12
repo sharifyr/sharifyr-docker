@@ -39,6 +39,6 @@ networks:
 
   elk:
     external:
-      name: dockerelk_elk
+      name: elk_elk
   sharifyr:
     driver: bridge

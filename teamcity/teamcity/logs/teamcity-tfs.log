@@ -16,3 +16,9 @@
 [2018-11-12 00:03:39,441]   INFO - s.java.TfsJavaRunnerTerminator - Terminating TFS java sessions
 [2018-11-12 00:15:44,208]   INFO - vcs.tfs.pool.TfsPoolTerminator - Terminating TFS .net sessions
 [2018-11-12 00:15:44,212]   INFO - s.java.TfsJavaRunnerTerminator - Terminating TFS java sessions
+[2018-11-12 04:19:46,145]   INFO - vcs.tfs.pool.TfsPoolTerminator - Terminating TFS .net sessions
+[2018-11-12 04:19:46,145]   INFO - s.java.TfsJavaRunnerTerminator - Terminating TFS java sessions
+[2018-11-12 16:23:41,518]   INFO - vcs.tfs.pool.TfsPoolTerminator - Terminating TFS .net sessions
+[2018-11-12 16:23:41,520]   INFO - s.java.TfsJavaRunnerTerminator - Terminating TFS java sessions
+[2018-11-12 16:38:38,631]   INFO - vcs.tfs.pool.TfsPoolTerminator - Terminating TFS .net sessions
+[2018-11-12 16:38:38,632]   INFO - s.java.TfsJavaRunnerTerminator - Terminating TFS java sessions
