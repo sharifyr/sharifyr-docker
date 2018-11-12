@@ -1,6 +1,6 @@
 core/client-main/
 core/server-social/
-teamcity/teamcity/data/
+teamcity/teamcity/data/*
 !teamcity/teamcity/data/import/
-teamcity/teamcity/logs/
+teamcity/teamcity/logs/*
 teamcity/teamcity/data/system/pluginData/customDataStorage/buildTypes/bt1/idmap.properties
