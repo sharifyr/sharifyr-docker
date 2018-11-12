@@ -1,0 +1,10 @@
+<state>
+  <branches>
+    <entry>
+      <string>refs/heads/master</string>
+      <string>73e04f5ce56caffa21f5477faed4fd6613c9072f</string>
+    </entry>
+  </branches>
+  <defaultBranchName>refs/heads/master</defaultBranchName>
+  <myTimestamp>2018-11-12 04:07:42.356 UTC</myTimestamp>
+</state>
