@@ -3,4 +3,5 @@ core/server-social/
 teamcity/teamcity/data/*
 !teamcity/teamcity/data/import/
 teamcity/teamcity/logs/*
+teamcity/teamcity-agent/conf/
 teamcity/teamcity/data/system/pluginData/customDataStorage/buildTypes/bt1/idmap.properties
