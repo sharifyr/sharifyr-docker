@@ -3,7 +3,8 @@ version: '3.2'
 services:
 
   client:
-    image: sharifyr/client-main
+    build:
+      context: core/client-main/
     ports: 
       - "80:80"
     networks:
@@ -12,7 +13,8 @@ services:
       npm test
 
   server:
-    image: sharifyr/server-social
+    build:
+      context: core/server-social/
     ports: 
       - "3000:3000"
     depends_on:
