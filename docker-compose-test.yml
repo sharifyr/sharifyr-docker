@@ -10,7 +10,7 @@ services:
       - sharifyr
 
   server:
-  image: sharifyr/server-social
+    image: sharifyr/server-social
     ports: 
       - "3000:3000"
     depends_on:
