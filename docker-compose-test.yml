@@ -73,8 +73,6 @@ services:
       - elasticsearch
 
 networks:
-  teamcity:
-    driver: bridge
   elk:
     driver: bridge
   sharifyr:
