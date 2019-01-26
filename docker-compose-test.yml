@@ -32,7 +32,7 @@ services:
       POSTGRES_PASSWORD: sharifyrpassword
     networks:
       - sharifyr
-
+ 
   elasticsearch:
     build:
       context: elk/elasticsearch/
