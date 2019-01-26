@@ -1,0 +1,116 @@
+version: '3.2'
+
+services:
+
+  client:
+    build:
+      context: core/client-main/
+    ports: 
+      - "80:80"
+    networks:
+      - sharifyr
+    volumes:
+      - ./core/client-main:/usr/src/app:rw
+
+  server:
+    build:
+      context: core/server-social/
+    ports: 
+      - "3000:3000"
+    depends_on:
+      - db
+    networks:
+      - sharifyr
+      - elk
+    volumes:
+      - ./core/server-social:/usr/src/app:rw
+      - /usr/src/app/node_modules # don't overwrite the image's node modules with the local dir
+
+  db:
+    image: postgres
+    ports: 
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: sharifyr
+      POSTGRES_PASSWORD: sharifyrpassword
+    networks:
+      - sharifyr
+
+  teamcity:
+    image: jetbrains/teamcity-server:2018.1.5-linux
+    ports: 
+      - "8111:8111"
+    networks:
+      - teamcity
+    volumes:
+      - type: bind
+        source: ./teamcity/teamcity/data
+        target: /data/teamcity_server/datadir
+      - ./teamcity/teamcity/logs:/opt/teamcity/logs:rw
+
+  teamcity-agent:
+    image: jetbrains/teamcity-agent:2018.1.5-linux
+    environment:
+      SERVER_URL: "teamcity:8111"
+      DOCKER_IN_DOCKER: "start"
+    networks:
+      - teamcity
+    volumes:
+      - ./teamcity/teamcity-agent/conf:/data/teamcity_agent/conf:rw
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/buildagent/work:/opt/buildagent/work 
+      - /opt/buildagent/temp:/opt/buildagent/temp 
+      - /opt/buildagent/tools:/opt/buildagent/tools 
+      - /opt/buildagent/plugins:/opt/buildagent/plugins 
+      - /opt/buildagent/system:/opt/buildagent/system
+
+  elasticsearch:
+    build:
+      context: elk/elasticsearch/
+    volumes:
+      - ./elk/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - elk
+
+  logstash:
+    build:
+      context: elk/logstash/
+    volumes:
+      - ./elk/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./elk/logstash/pipeline:/usr/share/logstash/pipeline:ro
+      - ./elk/logstash/keys:/usr/share/logstash/keys:ro
+    ports:
+      - "5000:5000"
+      - "9600:9600"
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - elk
+      - sharifyr
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    build:
+      context: elk/kibana/
+    volumes:
+      - ./elk/kibana/config/:/usr/share/kibana/config:ro
+    ports:
+      - "5601:5601"
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+
+networks:
+  teamcity:
+    driver: bridge
+  elk:
+    driver: bridge
+  sharifyr:
+    driver: bridge

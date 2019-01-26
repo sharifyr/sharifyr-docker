@@ -1,0 +1,83 @@
+version: '3.2'
+
+services:
+
+  client:
+    build:
+      context: core/client-main/
+    ports: 
+      - "80:80"
+    networks:
+      - sharifyr
+
+  server:
+    build:
+      context: core/server-social/
+    ports: 
+      - "3000:3000"
+    depends_on:
+      - db
+    networks:
+      - sharifyr
+      - elk
+
+  db:
+    image: postgres
+    ports: 
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: sharifyr
+      POSTGRES_PASSWORD: sharifyrpassword
+    networks:
+      - sharifyr
+
+  elasticsearch:
+    build:
+      context: elk/elasticsearch/
+    volumes:
+      - ./elk/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - elk
+
+  logstash:
+    build:
+      context: elk/logstash/
+    volumes:
+      - ./elk/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./elk/logstash/pipeline:/usr/share/logstash/pipeline:ro
+      - ./elk/logstash/keys:/usr/share/logstash/keys:ro
+    ports:
+      - "5000:5000"
+      - "9600:9600"
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - elk
+      - sharifyr
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    build:
+      context: elk/kibana/
+    volumes:
+      - ./elk/kibana/config/:/usr/share/kibana/config:ro
+    ports:
+      - "5601:5601"
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+
+networks:
+  teamcity:
+    driver: bridge
+  elk:
+    driver: bridge
+  sharifyr:
+    driver: bridge
